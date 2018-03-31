@@ -11,7 +11,8 @@ class PokemonsList extends Component {
         var { pokemons } = this.props;
         var img_id;
         var poke_images = [];
-        for (var i = 1; i < 7; i++) {
+        var poke_total = pokemons.length;
+        for (var i = 1; i <= poke_total; i++) {
             if (i < 10) img_id = `00${i}`;
             else if (i < 100) img_id = `0${i}`;
             else img_id = `${i}`;
@@ -32,7 +33,8 @@ class PokemonsList extends Component {
                     <Pokemon
                         poke={pokemons[index]}
                         poke_image={poke_image}
-                        key={index + 1}
+                        key={index}
+                        id={index+1}
                     />
                 );
             })

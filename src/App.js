@@ -4,6 +4,7 @@ import image_header from './images/pokemon-header.jpg';
 
 // import components
 import PokemonsList from './components/PokemonsList';
+import NextButton from './components/NextButton';
 class App extends Component {
     render() {
         return (
@@ -17,6 +18,9 @@ class App extends Component {
                 <section className="pokedex-results">
                     <PokemonsList />
                 </section>
+                
+                <NextButton />
+                
             </div>
         );
     }
