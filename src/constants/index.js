@@ -1,2 +1,3 @@
 export const FETCH_POKEMON = 'FETCH_POKEMON';
 export const NEXT_LIST = 'NEXT_LIST';
+export const TOGGLE_LOADING = 'TOGGLE_LOADING';

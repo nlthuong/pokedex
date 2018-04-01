@@ -9,30 +9,31 @@ class NextButton extends Component {
         return (
             <button 
                 type="button" 
-                className="btn btn-primary"
-                onClick={() => {
-                    this.onShowNextList(next_list)
-                }}
-            >Next</button>
+                className="next-button"
+                onClick={this.onShowNextList}
+            >Load more Pokemon</button>
             
         )}
     
-    onShowNextList = next_list => {
-        this.props.showNextList(next_list)
+    onShowNextList = () => {
+        this.props.toggleLoading();
+        this.props.next(this.props.pokemons.length+1, this.props.pokemons.length+20)
     }
 }
 
 const mapStateToProps = state => {
     return{
-        next_list: state.next_list
+        pokemons: state.pokemons
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        showNextList: next_list_url => {
-            dispatch(actions.actShowNextListRequest(next_list_url))
+        toggleLoading : () => {
+            dispatch(actions.actToggleLoading())
         }
     }
 }
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(NextButton);

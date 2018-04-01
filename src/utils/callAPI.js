@@ -3,7 +3,7 @@ import axios from 'axios';
 const callApi = (url) => {
     return axios({
         method: 'GET',
-        url: url,
+        url: "http://pokeapi.co"+url,
         data: null
     }).catch(err => {
         console.log(err)
@@ -11,3 +11,5 @@ const callApi = (url) => {
 }
 
 export default callApi;
+
+

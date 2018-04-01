@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import pokemons from './pokemons_reducer';
-import next_list from './next_list_reducer';
+import isloading from './isloading_reducer';
 
 const appReducers = combineReducers({
     pokemons,
-    next_list
+    isloading
 })
 
 export default appReducers;
