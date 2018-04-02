@@ -4,4 +4,4 @@ Technologies:
 - Reactjs
 - Redux
 
-I changed this line.
+I dont own image;co
