@@ -4,4 +4,4 @@ Technologies:
 - Reactjs
 - Redux
 
-I do own any image's copyright
+I do not own any image's copyright
